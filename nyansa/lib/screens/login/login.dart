@@ -4,6 +4,8 @@ import 'package:nyansa/components/customButton.dart';
 import 'package:nyansa/components/textArea.dart';
 import 'package:nyansa/constants.dart';
 
+import '../home.dart';
+
 class Login extends StatelessWidget {
   const Login({Key key}) : super(key: key);
 
@@ -41,7 +43,10 @@ class Login extends StatelessWidget {
                 text: "Login",
                 color: kprimaryColor,
                 primary: Colors.white,
-                press: () {},
+                press: () {
+                  return Navigator.push(
+                      context, MaterialPageRoute(builder: (_) => Home()));
+                },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nyansa/components/customButton.dart';
 import 'package:nyansa/constants.dart';
-import 'package:nyansa/screens/createAccount.dart';
+import 'package:nyansa/screens/create_account/createAccount.dart';
 
-import 'login.dart';
+import 'login/login.dart';
 
 class Welcome extends StatelessWidget {
   const Welcome({Key key}) : super(key: key);

@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:nyansa/components/appBar.dart';
 import 'package:nyansa/components/customButton.dart';
 import 'package:nyansa/constants.dart';
-import 'package:nyansa/screens/help.dart';
+import 'package:nyansa/screens/create_account/readingRestrictions.dart';
+
+import 'help.dart';
 
 class ReadingProficiency extends StatelessWidget {
-  const ReadingProficiency({Key? key}) : super(key: key);
+  const ReadingProficiency({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -92,7 +94,10 @@ class ReadingProficiency extends StatelessWidget {
                 text: "Continue",
                 color: kprimaryColor,
                 primary: Colors.white,
-                press: () {},
+                press: () {
+                  return Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => ReadingRestrictions()));
+                },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(25.0),
                 ),

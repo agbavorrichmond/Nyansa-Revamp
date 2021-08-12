@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:nyansa/components/customButton.dart';
 import 'package:nyansa/components/appBar.dart';
+import 'package:nyansa/components/textArea.dart';
 import 'package:nyansa/constants.dart';
-import 'package:nyansa/screens/readingProficiency.dart';
+import 'package:nyansa/screens/create_account/readingProficiency.dart';
 
 class CreateAccount extends StatelessWidget {
-  const CreateAccount({Key? key}) : super(key: key);
+  const CreateAccount({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,23 +18,14 @@ class CreateAccount extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              TextField(
-                decoration: InputDecoration(
-                  focusColor: Colors.black,
-                  prefixIcon: Icon(Icons.email_outlined),
-                  labelText: "Email",
-                  // hintText: "Email",
-                ),
+              TextArea(
+                labelText: "Email",
+                icon: Icon(Icons.email_outlined),
               ),
               SizedBox(height: 24.5),
-              TextField(
-                decoration: InputDecoration(
-                  focusColor: Colors.black,
-
-                  prefixIcon: Icon(Icons.password_rounded),
-                  labelText: "Password",
-                  // hintText: "Email",
-                ),
+              TextArea(
+                labelText: "Password",
+                icon: Icon(Icons.password_rounded),
               ),
               SizedBox(height: 30.0),
               Text(

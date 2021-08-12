@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nyansa/screens/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({Key key}) : super(key: key);
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -14,10 +14,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     Timer(Duration(seconds: 5), () {
-      Navigator.pushReplacement(
+      return Navigator.pushReplacement(
           context, MaterialPageRoute(builder: (context) => Welcome()));
     });
   }

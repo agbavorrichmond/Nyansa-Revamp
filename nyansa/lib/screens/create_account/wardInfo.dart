@@ -11,7 +11,7 @@ class WardInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("What is your ward’s name?"),
+      appBar: appBar("What is your ward’s name?", Container()),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(

@@ -8,7 +8,7 @@ class Help extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("Proficiency levels details"),
+      appBar: appBar("Proficiency levels details", Container()),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 29.0),
         child: ListView(

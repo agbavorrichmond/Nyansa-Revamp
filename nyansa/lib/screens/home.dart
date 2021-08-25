@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:nyansa/components/searchButton.dart';
 import 'package:nyansa/details.dart';
+import 'package:nyansa/screens/mainBottomBar.dart';
 
 class Home extends StatelessWidget {
   const Home({Key key}) : super(key: key);
@@ -7,6 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: BottomBar(),
       body: Padding(
         padding: const EdgeInsets.fromLTRB(15.0, 36.4, 15.0, 0.0),
         child: Column(
@@ -72,27 +75,7 @@ class Home extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 18.46),
-                TextField(
-                  decoration: InputDecoration(
-                    filled: true,
-                    fillColor: Color(0xFFE5E5E5),
-                    hintText: "Look For Books",
-                    prefixIcon: Icon(Icons.search),
-                    suffixIcon: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: CircleAvatar(
-                        backgroundColor: Color(0xFF00ACA8),
-                        child: Icon(
-                          Icons.mic,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(5.0),
-                        borderSide: BorderSide.none),
-                  ),
-                ),
+                SearchButton(),
               ],
             ),
             Flexible(
@@ -228,26 +211,14 @@ class Home extends StatelessWidget {
                 ),
               ),
             ),
-            // Expanded(
-            //   child: ListView(
-            //     children: <Widget>[
-            //       ListTile(
-            //         leading: Icon(Icons.map),
-            //         title: Text('Map'),
-            //       ),
-            //       ListTile(
-            //         leading: Icon(Icons.subway),
-            //         title: Text('Subway'),
-            //       ),
-            //     ],
-            //   ),
-            // ),
           ],
         ),
       ),
     );
   }
 }
+
+
 // class Home extends StatelessWidget {
 //   const Home({Key key}) : super(key: key);
 

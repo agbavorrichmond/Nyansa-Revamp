@@ -11,7 +11,7 @@ class ReadingRestrictions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("Add Reading Restrictions"),
+      appBar: appBar("Add Reading Restrictions", Container()),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 28.15),
         child: Column(
@@ -25,7 +25,7 @@ class ReadingRestrictions extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Expanded(
-              flex: 8,
+              flex: 20,
               child: ListView(
                 children: [
                   for (int i = 0; i < 10; i++)

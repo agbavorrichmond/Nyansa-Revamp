@@ -1,16 +1,23 @@
 import 'package:flutter/material.dart';
+
 import 'package:nyansa/components/appBar.dart';
 import 'package:nyansa/components/customButton.dart';
 import 'package:nyansa/constants.dart';
 import 'package:nyansa/screens/create_account/wardInfo.dart';
 
-class ReadingLimit extends StatelessWidget {
+class ReadingLimit extends StatefulWidget {
   const ReadingLimit({Key key}) : super(key: key);
 
   @override
+  _ReadingLimitState createState() => _ReadingLimitState();
+}
+
+class _ReadingLimitState extends State<ReadingLimit> {
+  int readingLimit = 20;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("Set daily reading limit"),
+      appBar: appBar("Set daily reading limit", Container()),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -18,28 +25,47 @@ class ReadingLimit extends StatelessWidget {
           Spacer(),
           Column(
             children: [
-              CircleAvatar(
-                backgroundColor: kproficiencyColor,
-                radius: 30,
-                child: Icon(
-                  Icons.arrow_drop_up,
-                  size: 40.0,
-                  color: Color(0xFF00ACA8),
+              GestureDetector(
+                onTap: () {
+                  return setState(() {
+                    readingLimit++;
+                  });
+                },
+                child: CircleAvatar(
+                  backgroundColor: kproficiencyColor,
+                  radius: 30,
+                  child: Icon(
+                    Icons.arrow_drop_up,
+                    size: 40.0,
+                    color: Color(0xFF00ACA8),
+                  ),
                 ),
               ),
               SizedBox(height: 36.8),
               Text(
-                "20 mins",
+                "$readingLimit mins",
                 style: TextStyle(fontSize: 37.0, fontWeight: FontWeight.w600),
               ),
               SizedBox(height: 36.8),
-              CircleAvatar(
-                backgroundColor: kproficiencyColor,
-                radius: 30,
-                child: Icon(
-                  Icons.arrow_drop_down,
-                  size: 40.0,
-                  color: Color(0xFF00ACA8),
+              GestureDetector(
+                onTap: () {
+                  if (readingLimit > 0) {
+                    setState(() {
+                      readingLimit--;
+                    });
+                  } else
+                    setState(() {
+                      readingLimit = 0;
+                    });
+                },
+                child: CircleAvatar(
+                  backgroundColor: kproficiencyColor,
+                  radius: 30,
+                  child: Icon(
+                    Icons.arrow_drop_down,
+                    size: 40.0,
+                    color: Color(0xFF00ACA8),
+                  ),
                 ),
               ),
             ],

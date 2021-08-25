@@ -12,7 +12,7 @@ class ReadingProficiency extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: appBar("Set child’s reading proficiency"),
+      appBar: appBar("Set child’s reading proficiency", Container()),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: Column(

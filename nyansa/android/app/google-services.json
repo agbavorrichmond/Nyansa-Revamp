@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "178806252972",
+    "project_id": "nyansa-project",
+    "storage_bucket": "nyansa-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178806252972:android:ca649285d19244cc38c609",
+        "android_client_info": {
+          "package_name": "com.nyansaproject.nyansa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178806252972-ea3jfo9j52cm30hl9uvp1k89q54p461d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD81TbjAwcnHQ-szEGnH083abOH0_ynTIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178806252972-ea3jfo9j52cm30hl9uvp1k89q54p461d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

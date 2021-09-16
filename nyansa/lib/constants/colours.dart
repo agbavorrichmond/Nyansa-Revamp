@@ -9,10 +9,11 @@ class ColorSys{
   }
 
   static Color primary = colorFromHex('#02A94C');
-  static Color gray = colorFromHex('#02A94C');
+  static Color gray = colorFromHex('#E0E0E0');
   static Color black = colorFromHex('#000000');
   static Color white = colorFromHex('#FFFFFF');
   static Color pinScreenColour = colorFromHex('#3D59A7');
   static Color clearButtonColour = colorFromHex('#5069B0');
   static Color nextButtonColour = colorFromHex('#00ACA8');
+  static Color dictionaryTileColour = colorFromHex('#9C9C9C');
 }

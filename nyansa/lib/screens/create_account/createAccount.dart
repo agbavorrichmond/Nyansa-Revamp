@@ -6,6 +6,9 @@ import 'package:nyansa/constants.dart';
 import 'package:nyansa/screens/create_account/readingProficiency.dart';
 
 class CreateAccount extends StatelessWidget {
+
+  static const routeName = 'createAccount';
+
   const CreateAccount({Key key}) : super(key: key);
 
   @override

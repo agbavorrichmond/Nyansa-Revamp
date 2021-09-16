@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nyansa/components/appBar.dart';
 import 'package:nyansa/components/customButton.dart';
 import 'package:nyansa/constants.dart';
-import 'package:nyansa/screens/create_account/wardInfo.dart';
+import 'package:nyansa/screens/create_account/ward_name.dart';
 
 class ReadingLimit extends StatefulWidget {
   const ReadingLimit({Key key}) : super(key: key);

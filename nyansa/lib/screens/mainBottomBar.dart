@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nyansa/constants.dart';
 import 'package:nyansa/screens/favourite.dart';
-import 'package:nyansa/screens/home.dart';
+import 'package:nyansa/screens/home_screen.dart';
 import 'package:nyansa/screens/search.dart';
 
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
@@ -25,7 +25,7 @@ class _BottomBarState extends State<BottomBar> {
         setState(() => _currentIndex = i);
         if (_currentIndex == 0) {
           return Navigator.push(context, MaterialPageRoute(builder: (context) {
-            return Home();
+            return HomeScreen();
           }));
         } else if (_currentIndex == 1) {
           return Navigator.push(context, MaterialPageRoute(builder: (_) {

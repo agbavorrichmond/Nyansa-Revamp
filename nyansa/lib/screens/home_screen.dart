@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nyansa/components/searchButton.dart';
-import 'package:nyansa/details.dart';
+import 'package:nyansa/book_details.dart';
 import 'package:nyansa/screens/mainBottomBar.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key key}) : super(key: key);
+class HomeScreen extends StatelessWidget {
+
+  static const routeName = 'home';
+
+  const HomeScreen({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -91,39 +94,39 @@ class Home extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Flexible(
-                        child: ListView(
-                          physics: BouncingScrollPhysics(),
-                          shrinkWrap: true,
-                          scrollDirection: Axis.horizontal,
-                          children: [
-                            GestureDetector(
-                              onTap: () {
-                                return Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                        builder: (_) => Details()));
-                              },
-                              child: Container(
+                        child: GestureDetector(
+                          onTap: () {
+                            return Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (_) => Details()));
+                          },
+                          child: ListView(
+                            physics: BouncingScrollPhysics(),
+                            shrinkWrap: true,
+                            scrollDirection: Axis.horizontal,
+                            children: [
+                              Container(
                                 height: 225,
                                 width: 154,
                                 child: Image.asset(
                                     "assets/images/jungle_book.jpg"),
                               ),
-                            ),
-                            SizedBox(width: 18),
-                            Container(
-                              height: 225,
-                              width: 154,
-                              child: Image.asset(
-                                  "assets/images/charlotte's_web.jpg"),
-                            ),
-                            SizedBox(width: 18),
-                            Container(
-                              height: 225,
-                              width: 154,
-                              child:
-                                  Image.asset("assets/images/jungle_book.jpg"),
-                            ),
-                          ],
+                              SizedBox(width: 18),
+                              Container(
+                                height: 225,
+                                width: 154,
+                                child: Image.asset(
+                                    "assets/images/charlotte's_web.jpg"),
+                              ),
+                              SizedBox(width: 18),
+                              Container(
+                                height: 225,
+                                width: 154,
+                                child:
+                                    Image.asset("assets/images/jungle_book.jpg"),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
                       SizedBox(height: 13.68),

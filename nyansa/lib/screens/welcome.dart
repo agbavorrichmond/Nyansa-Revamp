@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:nyansa/components/customButton.dart';
@@ -26,9 +27,13 @@ class Welcome extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 200.0),
-              Expanded(child: SvgPicture.asset("assets/images/nyansa.svg")),
-              SizedBox(height: 160.0),
-              Expanded(
+              Flexible(
+                fit: FlexFit.loose,
+                child: SvgPicture.asset("assets/images/nyansa.svg"),
+              ),
+              SizedBox(height: 140.0),
+              Flexible(
+                fit: FlexFit.loose,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
@@ -41,7 +46,7 @@ class Welcome extends StatelessWidget {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
-                    SizedBox(height: 32.0),
+                    SizedBox(height: 24.0),
                     CustomButton(
                       text: "Create Account",
                       color: kprimaryColor,

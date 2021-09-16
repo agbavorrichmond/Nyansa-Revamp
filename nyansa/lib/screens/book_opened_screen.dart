@@ -17,7 +17,7 @@ class _BookOpenedScreenState extends State<BookOpenedScreen> {
 
   double height;
   double width;
-  bool showControls;
+  bool showControls = true;
 
 
   @override
@@ -49,7 +49,6 @@ class _BookOpenedScreenState extends State<BookOpenedScreen> {
   @override
   Widget build(BuildContext context) {
 
-    showControls = true;
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
 
@@ -74,8 +73,9 @@ class _BookOpenedScreenState extends State<BookOpenedScreen> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Container(),
-                  Visibility(
-                    visible: showControls,
+                  AnimatedOpacity(
+                    opacity: showControls ? 1.0 : 0.0,
+                    duration: const Duration(milliseconds: 300),
                     child: Container(
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(35.0),

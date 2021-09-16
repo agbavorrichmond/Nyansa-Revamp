@@ -5,6 +5,9 @@ import 'package:flutter_svg/svg.dart';
 import 'package:nyansa/screens/welcome.dart';
 
 class SplashScreen extends StatefulWidget {
+
+  static const routeName  = 'splash';
+
   const SplashScreen({Key key}) : super(key: key);
 
   @override

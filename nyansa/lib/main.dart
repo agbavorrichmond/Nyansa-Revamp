@@ -1,8 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:nyansa/Screens/splashScreen.dart';
+import 'package:flutter/services.dart';
+import 'package:nyansa/screens/book_opened_screen.dart';
+import 'package:nyansa/screens/create_account/createAccount.dart';
+import 'package:nyansa/screens/create_account/hand_off_screen.dart';
+import 'package:nyansa/screens/create_account/pin_screen.dart';
+import 'package:nyansa/screens/create_account/ward_age.dart';
+import 'package:nyansa/screens/home_screen.dart';
+import 'package:nyansa/screens/splashScreen.dart';
 
 void main() {
-  runApp(MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((_) {
+    runApp(MyApp());
+  });
 }
 
 class MyApp extends StatelessWidget {
@@ -31,7 +42,22 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.black),
         scaffoldBackgroundColor: Colors.white,
       ),
-      home: SplashScreen(),
+      routes: <String, WidgetBuilder>{
+        WardAge.routeName: (context) => WardAge(),
+        SplashScreen.routeName: (context) => SplashScreen(),
+        CreateAccount.routeName: (context) => CreateAccount(),
+        PinScreen.routeName: (context) => PinScreen(),
+        HandOffScreen.routeName: (context) => HandOffScreen(),
+        HomeScreen.routeName: (context) => HomeScreen(),
+        BookOpenedScreen.routeName: (context) => BookOpenedScreen(),
+      },
+      initialRoute: SplashScreen.routeName,
+      onGenerateRoute: (RouteSettings settings){
+        return null;
+      },
+      onUnknownRoute: (RouteSettings settings){
+        return null;
+      },
     );
   }
 }
